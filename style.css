@@ -1,16 +1,44 @@
+@font-face{ 
+
+font-family: Ethnocentric;
+src:url(fontes/ethnocentric/.otf);
+
+}
+
+@font-face{ 
+
+font-family: Techno;
+src:url(fontes/techno_hideo/.ttf);
+
+}
+
+@font-face{ 
+
+font-family: Good;
+src:url(fontes/good_times/.otf);
+
+}
+
+
+
+
+
+
 /* Variáveis */
 :root {
-    --cor-primaria: #2A5CAA;
-    --cor-secundaria: #FF6B35;
-    --cor-texto: #333333;
-    --cor-texto-claro: #666666;
-    --cor-fundo: #FFFFFF;
-    --cor-fundo-cinza: #F8F9FA;
+    --cor-primaria: black;
+    --cor-secundaria: white;
+    --cor-texto:  white;
+    --cor-texto-claro: white;
+    --cor-fundo: #000000;
+    --cor-fundo-cinza: whitesmoke; 
     --cor-borda: #E0E0E0;
-    --sombra: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --sombra: 0 4px 12px rgba(137, 137, 137, 1);
     --borda-arredondada: 8px;
     --transicao: all 0.3s ease;
 }
+
+
 
 /* Reset */
 * {
@@ -51,19 +79,14 @@ button {
     cursor: pointer;
 }
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-}
 
-.container-nav {
-    width: 90%;
+
+
+.container {
+    width: 110%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
-    display: flex;
 }
 
 /* Tipografia */
@@ -97,36 +120,42 @@ p {
 }
 
 /* Botões */
+/* === BOTÃO PRIMÁRIO (Preto → Branco) === */
 .botao-primario {
     display: inline-block;
-    background-color: var(--cor-primaria);
-    color: white;
+    background-color: var(--cor-primaria); /* Preto */
+    color: var(--cor-texto);              /* Texto branco */
     padding: 12px 30px;
     border-radius: var(--borda-arredondada);
     font-weight: 600;
     transition: var(--transicao);
+    border: 2px solid white; /* Borda transparente (pode mudar para var(--cor-primaria) se preferir) */
 }
 
 .botao-primario:hover {
-    background-color: #1e4a8a;
+    background-color: var(--cor-secundaria); /* Branco */
+    color: var(--cor-primaria);             /* Texto preto */
+    border-color: black;             
     transform: translateY(-2px);
     box-shadow: var(--sombra);
 }
 
+/* === BOTÃO SECUNDÁRIO (Branco → Preto) === */
 .botao-secundario {
     display: inline-block;
-    background-color: var(--cor-fundo);
-    color: var(--cor-primaria);
+    background-color: var(--cor-secundaria);          /* Transparente (ou var(--cor-secundaria) para fundo branco sólido) */
+    color: black;          /* Texto branco */
     padding: 12px 30px;
     border-radius: var(--borda-arredondada);
-    border: 2px solid var(--cor-primaria);
+    border: 2px solid var(--cor-secundaria); /* Borda branca */
     font-weight: 600;
     transition: var(--transicao);
 }
 
 .botao-secundario:hover {
-    background-color: var(--cor-primaria);
-    color: white;
+    background-color: black; /* Branco */
+    color: white;             /* Texto preto */
+    border-color: white;      /* Borda preta (opcional) */
     transform: translateY(-2px);
     box-shadow: var(--sombra);
 }
@@ -164,32 +193,49 @@ p {
     box-shadow: var(--sombra);
 }
 
+
+
 /* Cabeçalho */
-.cabecalho {
-    background-color: rgba(30, 30, 30, 1);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background-color: var(--cor-fundo);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    padding: 20px 0;
-    transition: var(--transicao);
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transform: translateY(-10px);
+  opacity: 20;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.logo {
-    font-size: 1.75rem;
-    font-weight: 700;
-    color: var(--cor-primaria);
+.site-header:hover {
+  transform: translateY(0);
+  opacity: 1;
+  background: rgba(0, 0, 0, 1);
+  backdrop-filter: blur(10px);
+}
+
+.container-nav {
+    width: 150px;
+    margin-left: 100px;
+   
+
+}
+
+.logo{
+margin-top: 20px;
+
 }
 
 .logo span {
     color: var(--cor-secundaria);
-}
-
-.navegacao{
-    position: left;
 }
 
 .navegacao ul {
@@ -228,11 +274,12 @@ p {
 
 /* Banner */
 .banner {
+   
     min-height: 100vh;
     display: flex;
     align-items: center;
     padding: 120px 0 80px;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/banner.png') no-repeat center center/cover;
     color: white;
     text-align: center;
 }
@@ -316,14 +363,14 @@ p {
 }
 
 .contato-info {
-    background-color: var(--cor-fundo);
+    background-color: White;
     padding: 40px;
     border-radius: var(--borda-arredondada);
     box-shadow: var(--sombra);
 }
 
 .contato-info h3 {
-    color: var(--cor-primaria);
+    color: black;
     margin-bottom: 30px;
 }
 
@@ -336,7 +383,7 @@ p {
 
 .info-item i {
     font-size: 1.25rem;
-    color: var(--cor-secundaria);
+    color: black;
     width: 30px;
     text-align: center;
 }
@@ -360,9 +407,32 @@ p {
 }
 
 .social-link:hover {
-    background-color: var(--cor-secundaria);
+    background-color: #0e76a8;
     transform: translateY(-3px);
+
 }
+
+
+.social-insta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--cor-primaria);
+    color: white;
+    border-radius: 50%;
+    transition: var(--transicao);
+}
+
+.social-insta:hover {
+
+    background: linear-gradient(45deg, #833ab4, #e1306c, #fcaf45);
+    transform: translateY(-3px);
+    
+}
+
+
 
 .form-contato {
     display: grid;
