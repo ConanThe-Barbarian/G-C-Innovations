@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G&C Innovations - Nossos Projetos</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="site-header">
+        <div class="container-nav">
+            <a href="index.html"><img src="images/logo.png" class="logo" alt="G&C Innovations"></a>
+        </div>
+        <div class="container">
+            <nav class="navegacao">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projetos.html" class="ativo">Projetos</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+            
+            <button class="menu-mobile" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Página de Projetos -->
+    <section class="pagina-projetos">
+        <div class="container">
+            <br>
+            <h1>Nossos Projetos</h1>
+            <p class="subtitulo" style="color: white;">Confira nosso portfólio de trabalhos realizados</p>
+            
+            <!-- Filtros -->
+            <div class="filtros-projetos">
+                <button class="filtro ativo" data-categoria="todos">Todos</button>
+                <button class="filtro" data-categoria="web">Web</button>
+                <button class="filtro" data-categoria="design">Design</button>
+                <button class="filtro" data-categoria="mobile">Mobile</button>
+            </div>
+            
+            <!-- Carrossel de Projetos -->
+            <div class="carrossel-container">
+                <div class="carrossel-projetos">
+                    <!-- Projeto 1 -->
+                    <article class="projeto-card" data-categoria="web">
+
+                       <img src="images/playhouse.png" alt="Website Corporativo" loading="lazy"> 
+                        
+                        <div class="projeto-info">
+                            <h3>Website Corporativo</h3>
+                            <p>Design moderno e responsivo para empresa de tecnologia</p>
+                            <a href="https://conanthe-barbarian.github.io/PlayHouse/" class="botao-saiba-mais">Ver Detalhes</a>
+                        </div>
+                    </article>
+                    
+                    <!-- Projeto 2 -->
+                    <article class="projeto-card" data-categoria="design">
+                        <img src="https://via.placeholder.com/400x250" alt="Identidade Visual" loading="lazy">
+                        <div class="projeto-info">
+                            <h3>Identidade Visual</h3>
+                            <p>Branding completo para rede de cafeterias</p>
+                            <a href="projeto-detalhe.html" class="botao-saiba-mais">Ver Detalhes</a>
+                        </div>
+                    </article>
+                    
+                    <!-- Projeto 3 -->
+                    <article class="projeto-card" data-categoria="mobile">
+                        <img src="https://via.placeholder.com/400x250" alt="Aplicativo Mobile" loading="lazy">
+                        <div class="projeto-info">
+                            <h3>Aplicativo Mobile</h3>
+                            <p>Sistema de delivery sob medida para restaurante</p>
+                            <a href="projeto-detalhe.html" class="botao-saiba-mais">Ver Detalhes</a>
+                        </div>
+                    </article>
+                    
+                    <!-- Projeto 4 -->
+                    <article class="projeto-card" data-categoria="web">
+                        <img src="https://via.placeholder.com/400x250" alt="Loja Virtual" loading="lazy">
+                        <div class="projeto-info">
+                            <h3>Loja Virtual</h3>
+                            <p>E-commerce completo para marca de moda</p>
+                            <a href="projeto-detalhe.html" class="botao-saiba-mais">Ver Detalhes</a>
+                        </div>
+                    </article>
+                    
+                    <!-- Projeto 5 -->
+                    <article class="projeto-card" data-categoria="design">
+                        <img src="https://via.placeholder.com/400x250" alt="Material Gráfico" loading="lazy">
+                        <div class="projeto-info">
+                            <h3>Material Gráfico</h3>
+                            <p>Campanha publicitária para lançamento de produto</p>
+                            <a href="projeto-detalhe.html" class="botao-saiba-mais">Ver Detalhes</a>
+                        </div>
+                    </article>
+                    
+                    <!-- Projeto 6 -->
+                    <article class="projeto-card" data-categoria="mobile">
+                        <img src="https://via.placeholder.com/400x250" alt="App Financeiro" loading="lazy">
+                        <div class="projeto-info">
+                            <h3>App Financeiro</h3>
+                            <p>Aplicativo de gestão financeira pessoal</p>
+                            <a href="projeto-detalhe.html" class="botao-saiba-mais">Ver Detalhes</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="contato">
+        <div class="container">
+            <h2>Vamos conversar</h2>
+            
+            <div class="contato-conteudo">
+                <div class="contato-info">
+                    <h3>Informações de Contato</h3>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <p style="color: black;">(21) 96482-8109</p>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p style="color: black;">gcinnovations@gmail.com</p>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p style="color: black;">Rio de Janeiro, Brasil</p>
+                    </div>
+                    
+                    <div class="redes-sociais">
+                        
+                        <a href="https://www.linkedin.com/in/conan-felix-2b6389330/" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/gcinnovationss/" class="social-insta"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/conan-felix-2b6389330/" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        
+                    </div>
+                    
+                    <a href="https://wa.me/5521964828109" class="botao-whatsapp">
+                        <i class="fab fa-whatsapp"></i> Conversar no WhatsApp
+                    </a>
+                </div>
+                
+<form class="form-contato">
+               <div class="form-group">
+                   <input type="text" placeholder="Seu nome" required>
+               </div>
+    
+                 <div class="form-group">
+                 <input type="email" placeholder="Seu e-mail" required>
+                 </div>
+    
+              <div class="form-group">
+                 <textarea placeholder="Sua mensagem" required></textarea>
+              </div>
+                   <input type="hidden" name="_subject" value="Novo contato do site G&C Innovations">
+                   <input type="text" name="_honey" style="display:none">
+
+                   <button type="submit" class="botao-primario">Enviar Mensagem</button>
+            <div class="success-message">
+        Mensagem enviada com sucesso! Entraremos em contato em breve.
+            </div>
+</form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="rodape">
+        <div class="container">
+            <div class="rodape-conteudo">
+                <div class="rodape-info">
+                    <a href="index.html" class="logo-rodape">G&C <span>Innovations</span></a>
+                    <p>Inovação e qualidade em cada projeto</p>
+                </div>
+                
+                <div class="rodape-links">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="projetos.html">Projetos</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="rodape-contato">
+                    <h4>Contato</h4>
+                    <p><i class="fas fa-phone-alt"></i> (21) 96482-8109</p>
+                    <p><i class="fas fa-envelope"></i> gcinnovations@gmail.com</p>
+                </div>
+            </div>
+            
+            <div class="rodape-copyright">
+                <p>&copy; 2024 G&C Innovations. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
